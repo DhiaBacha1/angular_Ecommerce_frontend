@@ -1,20 +1,96 @@
 <div class="carousel-container">
-    <carousel [isAnimated]="true">
-        <slide>
-            <img src="assets/images/img1.jpg" alt="slide" style="display: block; width: 100%;">
-        </slide>
-        <slide>
-            <img src="assets/images/img2.jpg" alt="slide" style="display: block; width: 100%;">
-        </slide>
-        <slide>
-            <img src="assets/images/img3.jpg" alt="slide" style="display: block; width: 100%;">
-        </slide>
-    </carousel>
-    <section class="featured">
-        <div class="d-flex justify-content-center pt-4">
-            <h1>Bienvenue à la boutique !</h1>
-        </div>
-    </section>
+    <ngb-carousel *ngIf="slides" [interval]="5000" [pauseOnHover]="false" [showNavigationIndicators]="false" [wrap]="true">
+        <ng-template ngbSlide *ngFor="let slide of slides">
+            <img [src]="slide.image" alt="slide" class="carousel-image">
+        </ng-template>
+    </ngb-carousel>
+    <div class="featured">
+        <h1>New Outerwear Collection</h1>
+        <button class="shop-now-button">Shop Now</button>
+    </div>
 </div>
 
+<section class="below-carousel">
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/images/story.JPG" alt="Our Story" class="grid-image">
+            <div class="overlay">
+                <h2>Our Story</h2>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="assets/images/img5.jpg" alt="Our Blog" class="grid-image">
+            <div class="overlay">
+                <h2>Our Blog</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="products-grid">
+        <div class="product-item">
+            <img src="assets/images/product1.png" alt="Product 1" class="product-image">
+            <p>Black and White Air Force</p>
+            <p>$140.00</p>
+        </div>
+        <div class="product-item">
+            <img src="assets/images/product2.png" alt="Product 2" class="product-image">
+            <p>Green Air Force</p>
+            <p>$110.00</p>
+        </div>
+        <div class="product-item">
+            <img src="assets/images/product3.jpg" alt="Product 3" class="product-image">
+            <p>Luxury Watch</p>
+            <p>$140.00</p>
+        </div>
+        <div class="product-item">
+            <img src="assets/images/product4.png" alt="Product 4" class="product-image">
+            <p>Jogging Pants</p>
+            <p>$70.00</p>
+        </div>
+    </div>
+    <button class="shop-all-button">Shop All</button>
+</section>
+
+<section class="images-section">
+    <div class="image-container">
+        <img src="assets/images/model.jpg" alt="Shoes" class="image">
+        <img src="assets/images/bag.jpg" alt="Bag" class="image">
+        <img src="assets/images/shoes.jpg" alt="Model" class="image">
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="footer-content">
+        <div class="footer-item">
+            <h3>Free Shipping and Returns</h3>
+        </div>
+        <div class="footer-item">
+            <h3>Secured Payments</h3>
+        </div>
+        <div class="footer-item">
+            <h3>Customer Service</h3>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Store</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Points of Sale</a>
+        </div>
+        <div class="footer-contact">
+            <p>500 Terry Francine St. San Francisco, CA 94158</p>
+            <p>Email: info@my-domain.com</p>
+            <p>Tel: 1-800-000-0000</p>
+        </div>
+        <div class="footer-subscribe">
+            <h4>Receive all our news and updates</h4>
+            <input type="email" placeholder="Email Address">
+            <button>Subscribe Now</button>
+        </div>
+    </div>
+</footer>

@@ -20,9 +20,7 @@ import { ListClientComponent } from './parametrage/list-client/list-client.compo
 
 const routes: Routes = [
   {
-    path: '', 
-    component: HomeComponent, 
-    data: {breadcrumb: 'Home'}
+     path: '', component: HomeComponent 
   },
   {
     path: 'test-error', 
