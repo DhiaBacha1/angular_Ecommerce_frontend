@@ -1,67 +1,100 @@
-.cart-no {
-    position: absolute;
-    min-height: 25px;
-    min-width: 25px;
-    border-radius: 50%;
-    background: rgb(255, 145, 0);
-    color: white;
-    text-align: center;
-    top: 50%;
-    right: -30px;
-    line-height: 25px;
-    transform: translateY(-50%);
-    font-size: 12px;
+header {
+    padding: 10px 20px;
+}
+
+.logo {
+    cursor: pointer;
+    max-height: 50px;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+
+    .form-control {
+        width: 100%;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px 0 0 4px;
+        padding: 10px;
+    }
+
+    .btn-search {
+        background-color: orange;
+        color: white;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
 }
 
 a {
     text-decoration: none;
     color: #343a40;
+    display: flex;
+    align-items: center;
 
     &.active {
-        color: orange
+        color: orange;
+    }
+
+    .fa-lg {
+        margin-right: 8px;
     }
 }
 
-.logo {
+.cart-no {
+    background: orange;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+.btn-menu {
+    background: none;
+    border: none;
+    color: #343a40;
     cursor: pointer;
 }
 
-/* Dropdown button styling */
-.btn-dropdown {
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Black text color */
-    border: 1px solid #dcdcdc; /* Border color */
-    font-size: 1.25rem; /* Font size for consistency */
-    font-weight: 400; /* Font weight for consistency */
-    text-transform: none; /* Ensure text is not transformed to uppercase */
+.dropdown-menu {
+    min-width: 250px;
+    font-size: 1rem;
+    padding: 10px 0;
 }
 
-/* Ensure icon is black */
-.btn-dropdown .fa-cog {
-    color: #000000; /* Black icon color */
+.dropdown-item {
+    color: #343a40;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    i {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: #f8f9fa;
+        color: orange;
+    }
 }
 
-/* Dropdown menu styling */
-.dropdown-menu-white {
-    background-color: #ffffff; /* White background */
-    border-color: #dcdcdc; /* Border color */
+.dropdown-submenu {
+    position: relative;
+
+    .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
 }
 
-/* Dropdown menu item styling */
-.dropdown-menu-white .dropdown-item {
-    color: #000000; /* Black text color */
-    font-size: 1.25rem; /* Font size for consistency */
-    font-weight: 400; /* Font weight for consistency */
-}
-
-/* Hover styling for dropdown items */
-.dropdown-menu-white .dropdown-item:hover {
-    background-color: #f8f9fa; /* Light background color on hover */
-    color: orange; /* Text color on hover */
-}
-
-/* Ensure consistent font size and weight for all links */
-.position-relative.fs-5 {
-    font-size: 1.25rem; /* Adjust font size if needed */
-    font-weight: 400; /* Regular font weight */
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
 }

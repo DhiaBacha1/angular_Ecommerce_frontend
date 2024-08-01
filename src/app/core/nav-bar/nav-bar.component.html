@@ -1,77 +1,74 @@
-<header class="d-flex flex-row align-items-center justify-content-between  bg-white border-bottom fixed-top shadow-sm">
-    <img src="/assets/images/logo.png" alt="logo" class="logo" style="max-height: 70px;" routerLink="/">
+<header class="d-flex flex-row align-items-center justify-content-between bg-white border-bottom fixed-top shadow-sm px-3">
+    <div class="d-flex align-items-center">
+        <div class="dropdown">
+            <button class="btn btn-menu" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bars fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-store me-2"></i> Boutiques Officielles
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-mobile-alt me-2"></i> Téléphone & Tablette
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-blender me-2"></i> Cuisine & Électroménager
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-heartbeat me-2"></i> Santé & Beauté
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-tv me-2"></i> Électroniques
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-tshirt me-2"></i> Mode
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-couch me-2"></i> Maison & Bureau
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-desktop me-2"></i> Informatique
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-gamepad me-2"></i> Jeux vidéos & Consoles
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-basketball-ball me-2"></i> Articles de sport
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-toolbox me-2"></i> Quincaillerie & Jardin
+                </a></li>
+                <li><a class="dropdown-item d-flex align-items-center" href="#">
+                    <i class="fa fa-ellipsis-h me-2"></i> Autres catégories
+                </a></li>
+            </ul>
+        </div>
+        <img src="/assets/images/logo.png" alt="logo" class="logo ms-2" style="max-height: 50px;" routerLink="/">
+    </div>
+
+    <div class="search-container d-flex align-items-center">
+        <input type="text" class="form-control" placeholder="Cherchez un produit, une marque ou une catégorie">
+        <button class="btn btn-search">RECHERCHER</button>
+    </div>
 
     <div class="d-flex align-items-center">
-        <a href="whatsapp://send?phone=+21623484380" class="position-relative fs-5 me-5" routerLinkActive="active">
-            <i class="fa fa-whatsapp fa-lg text-dark"></i>54 414 782
-        </a>
-        
-        <!-- Dropdown Button and Menu -->
-        <div class="dropdown me-5">
-            <button class="btn btn-dropdown d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-cog me-2"></i> Paramétrage
-                <span class="dropdown-toggle-icon"></span> 
-            </button>
-            <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="dropdownMenuButton1">
-                <li><a routerLink="/allproduct" class="dropdown-item" routerLinkActive="active">
-                    <i class="fas fa-box me-2"></i>Produit</a></li>
-                <li><a routerLink="/AllType" class="dropdown-item" routerLinkActive="active">
-                    <i class="fa fa-solid fa-tags me-2"></i>Type</a></li>
-                <li><a routerLink="/AllFamille" class="dropdown-item" routerLinkActive="active">
-                    <i class="fa fa-solid fa-list-alt me-2"></i>Famille</a></li>
-                <li><a routerLink="/AllUser" class="dropdown-item" routerLinkActive="active">
-                    <i class="fa fa-solid fa-user me-2"></i>Utilisateurs</a></li>
+        <div class="dropdown me-3">
+            <a class="d-flex align-items-center" id="dropdownLoginButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-user fa-lg text-dark"></i> Se connecter
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLoginButton">
+                <li><a routerLink="/account/login" class="dropdown-item">Connexion</a></li>
+                <li><a routerLink="/account/register" class="dropdown-item">Inscription</a></li>
             </ul>
         </div>
-        <div class="dropdown me-5">
-            <button class="btn btn-dropdown d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-solid fa-money me-2"></i> Ventes
-                <span class="dropdown-toggle-icon"></span> 
-            </button>
-            <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="dropdownMenuButton1">
-                <li><a routerLink="/allproduct" class="dropdown-item" routerLinkActive="active">
-                    <i class="fas fa-receipt me-2"></i>Commandes</a></li>
-                <li><a routerLink="/AllType" class="dropdown-item" routerLinkActive="active">
-                    <i class="fas fa-file-invoice me-2"></i>Factures</a></li>
-                <li><a routerLink="/clients" class="dropdown-item" routerLinkActive="active"> 
-                    <i class="fa fa-solid fa-user me-2"></i>Clients</a></li>
-            </ul>
-        </div>
-
-        <a routerLink="/shop" class="position-relative fs-5 me-5" routerLinkActive="active">
-            <i class="fa fa-shopping-bag fa-lg text-dark"></i> Boutique
+        <a routerLink="/help" class="d-flex align-items-center me-3">
+            <i class="fa fa-question-circle fa-lg text-dark"></i> Aide
         </a>
-        <a routerLink="/basket" class="position-relative fs-5 me-5" routerLinkActive="active">
-            <i class="fa fa-shopping-basket fa-lg text-dark"></i> Panier
-            <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no">
+        <a routerLink="/basket" class="d-flex align-items-center">
+            <i class="fa fa-shopping-cart fa-lg text-dark"></i> Panier
+            <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no ms-2">
                 {{getCount(basket.items)}}
             </div>
         </a>
-
-        <ng-container *ngIf="(accountService.currentUser$ | async) === null">
-            <a routerLink="/account/login" class="btn btn-outline-secondary me-2">Connexion</a>
-            <a routerLink="/account/register" class="btn btn-outline-secondary me-3">Inscription</a>
-        </ng-container>
-        
-        <ng-container *ngIf="accountService.currentUser$ | async as user">
-            <div class="dropdown ms-3 me-5" style="cursor: pointer;">
-                <a class="dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <strong>Welcome {{user.fullName}}</strong>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                    <li class="py-1">
-                        <a routerLink="/orders" class="dropdown-item">
-                            <i class="fa fa-history me-3"></i> Voir les commandes
-                        </a>
-                    </li>
-                    <div class="dropdown-divider"></div>
-                    <li class="py-1">
-                        <a (click)="accountService.logout()" class="dropdown-item">
-                            <i class="fa fa-sign-out me-3"></i> Se déconnecter
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </ng-container>
     </div>
 </header>
